@@ -22,6 +22,28 @@ class UserController extends Controller
     'type',
   );
 
+  // Read Article ------------------------------------ ->
+
+  public function index()
+  {
+
+    
+
+    if (auth()->user()->type !== 1) {
+      return response()->json([
+        'message' => 'user not authorizated'
+      ], Response::HTTP_UNAUTHORIZED);
+    }
+
+    $categories = User::all();
+    return response()->json([
+      "categories" => $categories,
+      "code" => 200,
+    ], Response::HTTP_OK);
+  }
+
+  // Read Article ------------------------------------ <-
+
   // Update User ------------------------------------ ->
 
   public function update(Request $request, $id)
@@ -61,6 +83,7 @@ class UserController extends Controller
 
   public function deleteUser($id)
   {
+
     $currentTypeUser = auth()->user()->type;
     if ($currentTypeUser !== 1) {
       return response()->json([
@@ -76,4 +99,3 @@ class UserController extends Controller
 
   // Delete User ------------------------------------ <-
 }
-

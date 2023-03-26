@@ -17,6 +17,7 @@ Route::group([
 Route::group([
   'prefix' => 'user'
 ], function () {
+  Route::get('', 'App\Http\Controllers\UserController@index');
   Route::put('/{id}', 'App\Http\Controllers\UserController@update');
   Route::delete('/{id}', 'App\Http\Controllers\UserController@deleteUser');
 });

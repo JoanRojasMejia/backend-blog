@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use JWTAuth;
+// use JWTAuth;
 
 class AuthController extends Controller
 {

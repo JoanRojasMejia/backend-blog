@@ -86,8 +86,8 @@ class ArticleController extends Controller
       'id_category' => 'required|string',
       'title' => 'required|string|max:100',
       'slug' => 'required|unique:article',
-      'small_text' => 'required|string|max:200',
-      'long_text' => 'required|string|max:2000',
+      'small_text' => 'required|string|max:400',
+      'long_text' => 'required|string|max:3000',
     ]);
 
     return $validator;
