@@ -1,6 +1,6 @@
-# fly.toml file generated for backend-blog-5 on 2023-03-24T17:41:59-05:00
+# fly.toml file generated for backend-blog on 2023-03-25T21:32:42-05:00
 
-app = "backend-blog-5"
+app = "backend-blog"
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "bog"
@@ -12,7 +12,7 @@ processes = []
     PHP_VERSION = "8.2"
 
 [env]
-  APP_ENV = "development"
+  APP_ENV = "production"
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
