@@ -130,7 +130,7 @@ class ArticleController extends Controller
 
     $article = Article::find($id);
 
-    if ($this->checkCreator($article->creator)) {
+    if (!$this->checkCreator($article->creator)) {
       return response()->json([
         'message' => 'user not authorizated'
       ], Response::HTTP_UNAUTHORIZED);

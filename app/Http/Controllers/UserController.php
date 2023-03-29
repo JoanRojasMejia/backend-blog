@@ -27,8 +27,6 @@ class UserController extends Controller
   public function index()
   {
 
-    
-
     if (auth()->user()->type !== 1) {
       return response()->json([
         'message' => 'user not authorizated'
